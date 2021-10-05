@@ -1,0 +1,12 @@
+[
+    {
+        "no": 1,
+        "bg": "red",
+        "fg": "blue"
+    },
+    {
+        "no": 2,
+        "bg": "yellow",
+        "fg": "green"
+    }
+]

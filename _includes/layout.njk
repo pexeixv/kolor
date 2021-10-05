@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolor My Brand</title>
+    <link rel="shortcut icon" href="//gavinpereira.in/img/fav/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="sass/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+
+    <section>
+        <header>
+            <div class="header_inner inner">
+                <h1>Kolor My Brand </h1>
+                <h2> by Gavin Pereira</h2>
+            </div>
+        </header>
+        <main>
+            <div class="main_left" id="logo_background">
+                {{content | safe}}
+            </div>
+            <div class="main_right">
+
+                {% for set in colorSets %}
+                    <div class="color" onclick="colorClicked('{{set.fg}}','{{set.bg}}')">
+                        <div class="color_lower color_piece" style='background: {{set.fg}};'></div>
+                        <div class="color_upper color_piece" style='background: {{set.bg}};'></div>
+                        <span class="color_no">{{set.no}}</span>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </main>
+    </section>
+
+
+</body>
+
+</html>
