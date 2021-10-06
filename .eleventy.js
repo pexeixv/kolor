@@ -1,13 +1,13 @@
 module.exports = eleventyConfig => {
-    eleventyConfig.addPassthroughCopy('./sass/style.css')
-    eleventyConfig.addPassthroughCopy('./img')
-    eleventyConfig.addPassthroughCopy('./js')
-    eleventyConfig.addPassthroughCopy('./font')
-    eleventyConfig.addPassthroughCopy('./_redirects')
+    eleventyConfig.addPassthroughCopy('./static/sass/style.css')
+    eleventyConfig.addPassthroughCopy('./static/img')
+    eleventyConfig.addPassthroughCopy('./static/js')
+    eleventyConfig.addPassthroughCopy('./static/font')
+    eleventyConfig.addPassthroughCopy('./static/_redirects')
     return {
         dir: {
-            input: '.',
-            output: '_site'
+            input: 'src',
+            output: 'static'
         }
     }
 }
