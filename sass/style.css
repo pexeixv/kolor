@@ -13,6 +13,7 @@ html {
 
 body {
   font-family: 'Product Sans Regular', sans-serif;
+  overflow: hidden;
 }
 
 a {
@@ -120,5 +121,19 @@ main {
   display: flex;
   grid-gap: 1em;
   padding: 1em;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    flex-direction: column;
+  }
+  .main_left, .main_right {
+    height: 50%;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
